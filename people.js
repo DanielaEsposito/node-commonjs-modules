@@ -9,8 +9,19 @@
 
 
 
-const name = require("./name.Js")
-let prova = name("daniela","esposito");
+const name = require("./name.Js");
+const hobbies = require("./hobbies");
+const person = ()=>{
+    let firtsInformation = name ("daniela","esposito");
+    let secondInformation = hobbies("cucina", "lettura", "disegno");
+
+    return{firstName : firtsInformation.firstName,
+           lastName: firtsInformation.lastName,
+           hobbies : secondInformation.hobbies
+    }
+}
+let prova = person();
+//let prova = hobbies("disegno","cicina","lettura");
 console.log(prova);
 
 //console.log("test");
